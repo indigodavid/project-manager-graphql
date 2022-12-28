@@ -1,6 +1,10 @@
 {
   "name": "project-manager-graphql",
   "packageManager": "yarn@3.3.1",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js"
+  },
   "dependencies": {
     "colors": "^1.4.0",
     "cors": "^2.8.5",
