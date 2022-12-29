@@ -39,6 +39,12 @@ const ProjectType = new GraphQLObjectType({
 const RootQuery = new GraphQLObjectType({
   name: 'RootQueryType',
   fields: {
+    clients: {
+      type: new GraphQLList(ClientType),
+      resolve(parent, args) {
+        return clients;
+      }
+    },
     client: {
       type: ClientType,
       args: { id: { type: GraphQLID }},
